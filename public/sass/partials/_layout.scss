@@ -1,3 +1,48 @@
-body {
-    background-color: rgb(122, 55, 55);
-}
+.header-main {
+    display: flex;
+    flex-direction: column;
+  }
+  #logo {
+    font-family: "raleway", sans-serif;
+    text-align: center;
+    margin: 14px 0px 14px 0px;
+  }
+  .city-search {
+    display: flex;
+    width: 100%;
+    background-color: grey;
+    box-shadow: inset 0px 2px 3px 0px rgba(50, 50, 50, 0.25);
+    padding: 12px 5px;
+    justify-content: center;
+  
+    // Recherche de la ville du restaurant
+    form {
+      .input-city {
+        text-align: center;
+        background-color: grey;
+        border: none;
+        font-weight: 500;
+      }
+      ::placeholder {
+        color: black;
+        opacity: 0.8;
+      }
+    }
+  }
+  .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: utils;
+    h2 {
+        flex-wrap: wrap;
+        margin: 20px 80px;
+        text-align: center;
+      }
+      p {
+        margin: 0px 30px 25px 30px;
+        font-weight: 200;
+        font-size: 18px;
+        text-align: center;
+      }
