@@ -1,0 +1,128 @@
+.fa-arrow-left {
+    font-weight: 600;
+    font-size: 20px;
+    position: absolute;
+    left: 20px;
+    transform: translateY(-8px);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  h1 {
+    margin: 15px auto;
+  }
+  .header-resto {
+    display: flex;
+    align-items: center;
+    a:visited {
+      color: black;
+    }
+}
+img {
+    width: 100%;
+    height: 55vh;
+    @media (max-width: 767px) {
+      height: 40vh;
+    }
+    object-fit: cover;
+    display: block;
+  }
+  .cartes {
+    background-color: white;
+    border-radius: 50px 50px 0px 0px;
+    position: relative;
+    margin-top: -45px;
+    @media (max-width: 767px) {
+      margin-top: -80px;
+    }
+}
+h2 {
+    margin: 0px;
+    padding: 25px 30px;
+    font-size: 28px;
+  }
+  .fa-heart {
+    transform: translateY(10px);
+    top: 0px;
+    padding-right: 25px;
+    font-size: 28px;
+  }
+  empty_heart {
+    &:hover {
+      transform: translateY(10px) scale(1.01);
+    }
+}
+h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-left: 5px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 0px;
+      height: 3px;
+      width: 45px;
+      background-color: blue;
+    }
+}
+.cartes .cartes__menus {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 0px 30px;
+    article {
+      overflow: hidden;
+    }
+}
+.menus__meal {
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        animation-delay: 150ms * $i;
+      }
+    }
+}
+.meal-description {
+    overflow: hidden;
+    h4 {
+      margin: 12px 0px 0px 12px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+p {
+    margin: 5px 0px 8px 12px;
+    font-weight: 200;
+  }
+}
+.meal__price {
+    margin-left: auto;
+    margin-top: auto;
+    padding: 0px 8px 0px 0px;
+    font-weight: 500;
+  }
+  @media (max-width: 767px) {}
+.meal-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+.meal__addtocart {
+    background-color: blue;
+    display: flex;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 0px 20px 20px 0px;
+    height: 65px;
+    width: 50px;
+    margin-right: -80px;
+    margin-left: 30px;
+    transition: all 500ms ease-in-out;
+    justify-content: center;
+    align-items: center;
+    .fa-check-circle {
+      color: white;
+      font-size: 20px;
+    }
+  }

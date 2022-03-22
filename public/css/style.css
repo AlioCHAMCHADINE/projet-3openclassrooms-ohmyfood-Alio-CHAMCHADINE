@@ -1,14 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
 body {
   margin: 0px;
 }
 
 #logo {
   text-align: center;
-  margin: 12px 0px 12px 0px;
+  margin: 14px 0px 14px 0px;
 }
 
-body {
-  background-color: #7a3737;
+.city-search {
+  display: flex;
+  width: 100%;
+  background-color: #a09999;
+  box-shadow: inset 0px 2px 3px 0px rgba(50, 50, 50, 0.25);
+  padding: 12px 5px;
+  justify-content: center;
 }
+
+#logo {
+  font-family: cursive, sans-serif;
+  text-align: center;
+  margin: 14px 0px 14px 0px;
+}
+
+.header-main {
+  display: flex;
+  flex-direction: column;
+}
+
+form .input-city {
+  text-align: center;
+  background-color: #a09999;
+  border: none;
+  font-weight: 500;
+}
+form ::placeholder {
+  color: black;
+  opacity: 0.8;
+}
+form .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  flex-wrap: wrap;
+  margin: 20px 80px;
+  text-align: center;
+}
+
+p {
+  margin: 0px 30px 25px 30px;
+  font-weight: 200;
+  font-size: 18px;
+  text-align: center;
+}
+
+.menu {
+  background-color: gray;
+  padding: 0px 25px 58px 23px;
+}
+.menu h2 {
+  padding-top: 40px;
+}
+.menu .menu__restaurants {
+  display: grid;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu__card {
+  width: 100%;
+  transform: translateX(-40px);
+}
+.menu__card figure {
+  width: 100%;
+  border-radius: 20px;
+  background-color: white;
+}
+.menu__card .new {
+  position: relative;
+}
+.menu__card .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 35px;
+  width: 80px;
+  background-color: #49ac49;
+  display: grid;
+  place-items: center;
+  top: 15px;
+  right: 15px;
+  font-weight: 500;
+  color: darken;
+}
+
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+figcaption {
+  position: relative;
+}
+figcaption p {
+  padding-left: 10px;
+  font-weight: 200;
+  line-height: 150%;
+  padding-bottom: 12px;
+}
+figcaption .fa-heart {
+  transform: translateY(-40px);
+  top: 50%;
+  font-size: 25px;
+}
+figcaption:hover {
+  transform: translateY(-40px) scale(1.1);
+}
+
+footer {
+  background-color: grey;
+  padding-bottom: 50px;
+}
+footer h2 {
+  padding: 20px 0px 15px 35px;
+  margin: 0px;
+  color: white;
+  font-weight: 400;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer p {
+  padding-left: 35px;
+  margin-block-end: 0px;
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 90%;
+}
+footer .fas {
+  color: white;
+  margin-right: 10px;
+  color: white;
+}
+footer .fa-hands-helping {
+  font-size: 13px;
+}
+
+.loader {
+  position: fixed;
+  background-color: rgba(245, 245, 245, 0.281);
+  display: grid;
+  place-items: center;
+  opacity: 0.9;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  animation: loader 500ms 2s forwards ease-in-out;
+  transform-origin: top;
+}
+.loader .fa-utensils {
+  animation: rotation 500ms infinite ease-in-out;
+  font-size: 20vh;
+}
+
+.fa-arrow-left {
+  font-weight: 600;
+  font-size: 20px;
+  position: absolute;
+  left: 20px;
+  transform: translateY(-8px);
+}
+.fa-arrow-left:hover {
+  cursor: pointer;
+}
+
+h1 {
+  margin: 15px auto;
+}
+
+.header-resto {
+  display: flex;
+  align-items: center;
+}
+.header-resto a:visited {
+  color: black;
+}
+
+img {
+  width: 100%;
+  height: 55vh;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 767px) {
+  img {
+    height: 40vh;
+  }
+}
+
+.cartes {
+  background-color: white;
+  border-radius: 50px 50px 0px 0px;
+  position: relative;
+  margin-top: -45px;
+}
+@media (max-width: 767px) {
+  .cartes {
+    margin-top: -80px;
+  }
+}
+
+h2 {
+  margin: 0px;
+  padding: 25px 30px;
+  font-size: 28px;
+}
+
+.fa-heart {
+  transform: translateY(10px);
+  top: 0px;
+  padding-right: 25px;
+  font-size: 28px;
+}
+
+empty_heart:hover {
+  transform: translateY(10px) scale(1.01);
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-left: 5px;
+  position: relative;
+}
+h3::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  height: 3px;
+  width: 45px;
+  background-color: blue;
+}
+
+.cartes .cartes__menus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 0px 30px;
+}
+.cartes .cartes__menus article {
+  overflow: hidden;
+}
+
+.menus__meal:nth-child(1) {
+  animation-delay: 150ms;
+}
+.menus__meal:nth-child(2) {
+  animation-delay: 300ms;
+}
+.menus__meal:nth-child(3) {
+  animation-delay: 450ms;
+}
+.menus__meal:nth-child(4) {
+  animation-delay: 600ms;
+}
+
+.meal-description {
+  overflow: hidden;
+}
+.meal-description h4 {
+  margin: 12px 0px 0px 12px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.meal-description p {
+  margin: 5px 0px 8px 12px;
+  font-weight: 200;
+}
+
+.meal__price {
+  margin-left: auto;
+  margin-top: auto;
+  padding: 0px 8px 0px 0px;
+  font-weight: 500;
+}
+
+.meal-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.meal__addtocart {
+  background-color: blue;
+  display: flex;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 0px 20px 20px 0px;
+  height: 65px;
+  width: 50px;
+  margin-right: -80px;
+  margin-left: 30px;
+  transition: all 500ms ease-in-out;
+  justify-content: center;
+  align-items: center;
+}
+.meal__addtocart .fa-check-circle {
+  color: white;
+  font-size: 20px;
+}
+
+.reservation-step {
+  padding: 0px 25px;
+}
+
+.steps {
+  counter-reset: tuto;
+}
+.steps ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding-inline-start: 15px;
+}
+@media (max-width: 901px) {
+  .steps ol {
+    flex-direction: column;
+  }
+}
+
+::before {
+  content: "" counter(tuto);
+  counter-increment: tuto;
+  color: white;
+  background-color: white;
+  height: 25px;
+  width: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 16.5px;
+  left: -12px;
+}
+
+/* Nuances pour les couleurs principales*/
+/* Couleurs principales */
+/* Mixin Font */
 
 /*# sourceMappingURL=style.css.map */

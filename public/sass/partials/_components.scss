@@ -1,0 +1,27 @@
+.reservation-step {
+    padding: 0px 25px;}
+    .steps {
+        counter-reset: tuto;
+        & ol {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 25px;
+          padding-inline-start: 15px;
+          @media (max-width: 901px) {
+            flex-direction: column;}
+          }
+        }
+        ::before {
+            content: "" counter(tuto);
+            counter-increment: tuto;
+            color: white;
+            background-color: white;
+            height: 25px;
+            width: 25px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 16.5px;
+            left: -12px;
+          }

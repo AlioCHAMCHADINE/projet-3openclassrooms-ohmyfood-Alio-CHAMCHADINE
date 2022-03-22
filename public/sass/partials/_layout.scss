@@ -1,25 +1,26 @@
-.header-main {
-    display: flex;
-    flex-direction: column;
-  }
-  #logo {
-    font-family: "raleway", sans-serif;
-    text-align: center;
-    margin: 14px 0px 14px 0px;
-  }
-  .city-search {
+
+.city-search {
     display: flex;
     width: 100%;
-    background-color: grey;
+    background-color:rgb(160, 153, 153);
     box-shadow: inset 0px 2px 3px 0px rgba(50, 50, 50, 0.25);
     padding: 12px 5px;
     justify-content: center;
-  
+}
+#logo {
+    font-family: cursive, sans-serif;
+    text-align: center;
+    margin: 14px 0px 14px 0px;
+  }
+  .header-main {
+    display: flex;
+    flex-direction: column;
+  }
     // Recherche de la ville du restaurant
     form {
-      .input-city {
+    .input-city {
         text-align: center;
-        background-color: grey;
+        background-color:rgb(160, 153, 153);
         border: none;
         font-weight: 500;
       }
@@ -27,22 +28,128 @@
         color: black;
         opacity: 0.8;
       }
-    }
-  }
   .heading {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: utils;
+    align-items: center;}
+  }
+  h2 {
+  flex-wrap: wrap;
+  margin: 20px 80px;
+    text-align: center;
+  }
+  p {
+    margin: 0px 30px 25px 30px;
+    font-weight: 200;
+    font-size: 18px;
+    text-align: center;
+  }
+  // Menus restautants
+.menu {
+    background-color:rgb(128, 128, 128);
+    padding: 0px 25px 58px 23px;
     h2 {
-        flex-wrap: wrap;
-        margin: 20px 80px;
-        text-align: center;
+        padding-top: 40px;
+  }
+  .menu__restaurants {
+    display: grid;}
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .menu__card {
+    width: 100%;
+    transform: translateX(-40px);
+    figure {
+        width: 100%;
+        border-radius: 20px;
+        background-color: white;
       }
-      p {
-        margin: 0px 30px 25px 30px;
-        font-weight: 200;
-        font-size: 18px;
-        text-align: center;
+      .new {
+        position: relative;
       }
+      .new::before {
+        content: "Nouveau";
+        position: absolute;
+        height: 35px;
+        width: 80px;
+        background-color: rgb(73, 172, 73);
+        display: grid;
+        place-items: center;
+        top: 15px;
+        right: 15px;
+        font-weight: 500;
+        color: darken;}
+    }
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 20px 20px 0px 0px;
+      }
+      figcaption {
+        position: relative;
+        p {
+          padding-left: 10px;
+          font-weight: 200;
+          line-height: 150%;
+          padding-bottom: 12px;
+        }
+        .fa-heart {
+            transform: translateY(-40px);
+            top: 50%;
+            font-size: 25px;
+        }
+            &:hover {
+              transform: translateY(-40px) scale(1.1);
+            }
+        }
+        footer {
+            background-color: grey;
+            padding-bottom: 50px;
+            h2 {
+                padding: 20px 0px 15px 35px;
+                margin: 0px;
+                color: white;
+                font-weight: 400;
+              }
+              a {
+                text-decoration: none;
+                color: white;
+              }
+              p {
+                padding-left: 35px;
+                margin-block-end: 0px;
+                color: white;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 90%;
+              }
+              .fas {
+                color: white;
+                margin-right: 10px;
+                color: white;
+              }
+              .fa-hands-helping {
+                font-size: 13px;
+              }
+            }
+            .loader {
+                position: fixed;
+                background-color:rgba(245, 245, 245, 0.281);
+                display: grid;
+                place-items: center;
+                opacity: 0.9;
+                height: 100vh;
+                inset: 0;
+                z-index: 1;
+                animation: loader 500ms 2s forwards ease-in-out;
+                transform-origin: top;
+                .fa-utensils {
+                  animation: rotation 500ms infinite ease-in-out;
+                  font-size: 20vh;
+                }
+              }
+
