@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@use "../partials/utils.scss";
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Shrikhand&display=swap');
 *,
 ::before,
 ::after {
@@ -10,6 +12,7 @@ body {
     margin: 0px;
   }
   #logo {
+    @include utils.font-title;
     text-align: center;
-    margin: 14px 0px 14px 0px;
+    margin: 12px 0px 12px 0px;
   }
