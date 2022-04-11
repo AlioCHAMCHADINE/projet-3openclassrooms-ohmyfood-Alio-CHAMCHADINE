@@ -336,7 +336,9 @@ img {
   top: 0px;
   padding-right: 25px;
   font-size: 28px;
+
 }
+  
 .cartes .empty_heart {
   color: transparent;
   background-image: linear-gradient(#ff79da, #9356dc);
